@@ -6,7 +6,7 @@ Week 3 task involve two projects
 The first deals with using HTML forms and the other is all about creating a personal portfolio page
 
 
-## 🔗 Links
+## Links
 [Portfolio](https://week3-frontend-task-a.chisomchris.repl.co)
 
 [Login](https://week-3-frontent-task-b.chisomchris.repl.co) / [Registration ](https://week-3-frontent-task-b.chisomchris.repl.co/registration.html)
