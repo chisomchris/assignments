@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+  background-color: transparent;
+  border:none;
+}
+:root{
+    --suv-background: hsl(184, 100%, 22%);
+    --sedans-background: hsl(31, 77%, 52%);
+    --luxury-background: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+html{
+    font-size: 15px;
+    background-color: var(--light-gray);
+}
+body > header{
+  position:fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  text-align: center;
+  padding : .5rem 1rem;
+}
+button a {
+  font-size: 1.25rem;
+}
+.flexbox{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    max-width: 768px;
+    position: relative;
+    
+}
+.flexbox > section{
+    padding: 2.5rem;
+}
+.flexbox img{
+    width: 3rem;
+}
+.flexbox p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 2em;
+}
+.flexbox h1{
+    color: var(--light-gray);
+    font-family: 'Big Shoulders Display', cursive, sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.flexbox > section:nth-child(1){
+    background-color: var(--sedans-background);
+}
+.flexbox > section:nth-child(2){
+    background-color: var(--suv-background);
+}
+.flexbox > section:nth-child(3){
+    background-color: var(--luxury-background);
+}
+.flexbox > section:nth-child(1) button{
+   color: var(--sedans-background);
+}
+.flexbox > section:nth-child(2) button{
+   color: var(--suv-background);
+}
+.flexbox > section:nth-child(3) button{
+   color: var(--luxury-background);
+}
+.flexbox button{
+    font-family: 'Big Shoulders Display', cursive, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    background-color: var(--light-gray);
+    padding: .5rem 1.5rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    border: solid 2px var(--light-gray);
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+.flexbox section button:hover{
+    background-color: transparent;
+    color: var(--light-gray);
+}
+
+
+/* grid styles */
+.gridbox{
+    margin-top: 5rem;
+    --width: 90vmin;
+    width: var(--width);
+    margin-left: auto;
+    margin-right: auto;
+  margin-bottom: 3rem;
+    height: calc( 0.7 * var(--width));
+    display: grid;
+    gap: .4rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+}
+.gridbox > div{
+    border-radius: .125rem;
+    -webkit-border-radius: .125rem;
+    -moz-border-radius: .125rem;
+    -ms-border-radius: .125rem;
+    -o-border-radius: .125rem;
+}
+.gridbox > div:nth-child(1){
+    background-color: orangered;
+    grid-column: 1/9;
+    grid-row: 1/6;
+}
+.gridbox > div:nth-child(2){
+    background-color: orange;
+    grid-column: 9/13;
+    grid-row: 1/6;
+}
+.gridbox > div:nth-child(3){
+    background-color: rgb(0, 175, 0);
+    grid-column: 1/6;
+    grid-row: 6/12;
+}
+.gridbox > div:nth-child(4){
+    background-color: rgb(13, 145, 197);
+    grid-row: 6/9;
+    grid-column: 6/13;
+}
+.gridbox > div:nth-child(5){
+    background-color: rgb(13, 145, 197);
+    grid-column: 6/13;
+    grid-row: 9/12;
+}
+/* grid styles end */
+
+@media screen and (min-width: 768px) {
+    .flexbox{
+        flex-direction: row;
+    }
+  .flexbox > section{
+    padding-bottom: 7.5rem;
+}
+  .flexbox button{
+    margin-top: 3rem;
+    position: absolute;
+    bottom: 3rem;
+}
+}
