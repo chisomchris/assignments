@@ -1,0 +1,164 @@
+:root{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    --gray: #999;
+    --black: #333;
+    --blue: #80d0ff;
+    --dark-blue: #11a8ff;
+    --white: #fff;
+    --succes: springgreen;
+    --failure: #ff3300;
+    color: var(--black);
+}
+:focus{
+    outline: dotted 2px rebeccapurple;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+header{
+    background-color: var(--black);
+    color: var(--white);
+}
+header a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 1.25rem;
+}
+header span{
+    color: var(--blue);
+}
+header .wrapper{
+    padding: .75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header small{
+    font-weight: 600;
+}
+
+/* main */
+main{
+    padding: 1.5rem 0;
+}
+main h1{
+    margin: 1rem 0;
+}
+main form{
+    background-color: #f2faff;
+    padding: 1rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+main .input-group{
+    padding: .5rem 1rem;
+    background-color: var(--white);
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+}
+.input-group input, .input-group select{
+    width: 100%;
+    padding: .25rem .5rem;
+    margin-top: .5rem;
+    font-size: 1.125rem;
+    border: var(--gray) solid 2px;
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+}
+input[type="color"]{
+    padding: 0;
+    cursor: pointer;
+    min-height: 2rem;
+}
+
+#submit{
+    padding: .5rem 1rem;
+}
+#submit button{
+    width: 100%;
+    background-color: var(--dark-blue);
+    padding: .5rem 1rem;
+    border: var(--dark-blue) solid 2px;
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+    color: var(--white);
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+}
+#submit button:hover, #submit button:active, #submit button:focus{
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+main .input-group:nth-child(7) input{
+    text-align: right;
+}
+main .input-group:nth-child(8) input{
+    text-align: right;
+}
+input:invalid{
+    border-color: var(--failure);
+}
+input:valid{
+    border-color: var(--succes);
+}
+
+@media screen and (min-width: 992px) {
+    main form{
+        grid-template-columns: repeat(12, 1fr);
+        padding: 2.5rem 1.5rem;
+    }
+    main .input-group:nth-child(odd){
+        grid-column: 1/7;
+    }
+    main .input-group:nth-child(even){
+        grid-column: 7/13;
+    }
+    main .input-group:nth-child(7){
+        grid-column: 1/5;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    main .input-group:nth-child(8){
+        grid-column: 5/9;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    main .input-group:nth-child(9){
+        grid-column: 9/13;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    #submit{
+        grid-column: 5/9;
+        padding: 2rem 0 .5rem;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page | Chisomchris</title>
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+  <header>
+        <div class="wrapper">
+            <a href="#">&lt; <span>Chisomchris</span> /&gt;</a>
+            <small>Register to stay updated</small>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <h1>Register Now</h1>
+            <form action="./success.html" method="get">
+                <div class="input-group">
+                    <label for="firstname">First name</label>
+                    <input type="text" placeholder="First name" required name="firstname" id="firstname">
+                </div>
+        
+                <div class="input-group">
+                    <label for="lastname">Last name</label>
+                    <input type="text" placeholder="Last name" required name="lastname" id="lastname">
+                </div>
+        
+                <div class="input-group">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+2340000000000" required pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$">
+                </div>
+        
+                <div class="input-group">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" required minlength="4" maxlength="35" title="Enter a valid email address e.g example@email.com" placeholder="exampe@email.com">
+                </div>
+        
+                <div class="input-group">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input type="password" id="password" name="password" required minlength="4" maxlength="35" placeholder="new password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                </div>
+                <div class="input-group">
+                    <label for="cpassword">
+                        Confirm Password
+                    </label>
+                    <input type="cpassword" id="cpassword" name="cpassword" required minlength="4" maxlength="35" placeholder="Confirm password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                </div>
+        
+                <div class="input-group">
+                    <label for="gender">Gender </label>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+        
+                <div class="input-group">
+                    <label for="dob">Date&nbsp;of&nbsp;Birth</label>
+                    <input type="date" name="dob" id="dob" min="01/01/2022" required>
+                </div>
+        
+                <div class="input-group">
+                    <label for="color">Favorite&nbsp;color</label>
+                    <input type="color" name="color" id="color" required>
+                </div>
+        
+                <div  id="submit">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </main>
+     <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>

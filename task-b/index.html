@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page | Chisomchris</title>
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <a href="#">&lt&nbsp;<span>Chisomchris</span>&nbsp;/&gt;</a>
+
+      <small>Login to access your account</small>
+    </div>
+  </header>
+  <main>
+    <div class="form">
+      <div class="login-register">
+        <h2>Login</h2>
+        <a href="./registration.html">Register</a>
+      </div>
+      <form action="./success.html" method="get">
+        <div class="input-group">
+          <label for="email">
+            Email
+          </label>
+          <input type="email" id="email" name="email" required minlength="4" maxlength="35"
+            title="Enter a valid email address e.g example@email.com" placeholder="exampe@email.com">
+        </div>
+        <div class="input-group">
+          <label for="password">
+            Password
+          </label>
+          <input type="password" name="password" id="password" required minlength="8" maxlength="25"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+        </div>
+        <div id="submit" class="input-group">
+          <input type="submit" value="Log In" role="button">
+        </div>
+      </form>
+      <div class="forgot-password">
+        <p><a href="#">forgot password?</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
